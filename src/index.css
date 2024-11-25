@@ -1,0 +1,93 @@
+.chatbot {
+  width: 400px; /* Lebar yang lebih besar */
+  border: 1px solid #eaeaea; /* Warna border lebih lembut */
+  border-radius: 16px; /* Sudut yang lebih lembut */
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff; /* Latar belakang putih bersih */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Bayangan yang lebih lembut */
+  font-family: 'Arial', sans-serif; /* Font lebih modern */
+  transition: box-shadow 0.3s ease; /* Efek transisi untuk bayangan */
+}
+
+.chatbot:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Bayangan lebih besar saat hover */
+}
+
+.chat-window {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fafafa; /* Latar belakang lebih cerah */
+  overflow-y: auto;
+  max-height: 450px;
+  border-radius: 16px 16px 0 0; /* Sudut lebih lembut di bagian atas */
+}
+
+.message {
+  margin: 12px 0;
+  padding: 12px 16px; /* Padding lebih besar untuk kenyamanan */
+  border-radius: 16px; /* Sudut pesan lebih bulat */
+  font-size: 14px; /* Ukuran font sedikit lebih kecil dan halus */
+}
+
+.message.user {
+  background-color: #4a90e2; /* Warna biru yang lebih lembut untuk pengguna */
+  color: white; /* Teks putih untuk kontras */
+  text-align: right;
+}
+
+.message.bot {
+  background-color: #f0f0f0; /* Warna abu-abu terang untuk bot */
+  color: #333; /* Teks warna abu gelap */
+  text-align: left;
+}
+
+form {
+  display: flex;
+  padding: 15px;
+  background-color: #f7f7f7; /* Latar belakang lebih terang */
+  border-top: 1px solid #eaeaea; /* Garis pemisah lebih halus */
+}
+
+input {
+  flex-grow: 1;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 24px; /* Sudut lebih membulat untuk input */
+  margin-right: 12px; /* Jarak lebih besar antara input dan button */
+  font-size: 14px; /* Ukuran font lebih besar */
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sedikit bayangan pada input */
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lebih besar saat fokus */
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 24px; /* Sudut lebih membulat untuk button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animasi halus untuk warna dan transformasi */
+}
+
+button:hover {
+  background-color: #357ab6; /* Warna saat hover lebih gelap */
+  transform: translateY(-2px); /* Efek hover angkat sedikit */
+}
+
+button:active {
+  background-color: #2b5d88; /* Warna saat aktif lebih gelap */
+  transform: translateY(0); /* Efek klik */
+}
+
+.error-message {
+  color: #ff6b6b; /* Warna merah lembut untuk pesan error */
+  font-size: 13px;
+  margin-top: 10px;
+}
