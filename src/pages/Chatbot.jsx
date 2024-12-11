@@ -16,9 +16,9 @@ const Chatbot = () => {
     useEffect(() => {
         recognition.onresult = async (event) => {
             const transcript = event.results[0][0].transcript; 
-            setInput(transcript); // Set input dengan hasil suara
+            setInput(transcript); 
 
-            // Kirim pesan secara otomatis dan tunggu balasan dari AI
+           
             await handleSendMessage(transcript);
         };
 
@@ -27,7 +27,7 @@ const Chatbot = () => {
         };
 
         return () => {
-            recognition.abort(); // Hentikan recognition saat komponen di-unmount
+            recognition.abort(); 
         };
     }, [recognition]);
 
