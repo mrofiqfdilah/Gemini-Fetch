@@ -6,7 +6,7 @@ const Chatbot = () => {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState('');
     const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false); // Tambahkan state loading
+    const [loading, setLoading] = useState(false); 
     const API_KEY = 'API KEY'; // Ganti dengan API Key Anda
 
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
