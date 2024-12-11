@@ -7,15 +7,15 @@ const Chatbot = () => {
     const [input, setInput] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false); 
-    const API_KEY = 'API KEY'; // Ganti dengan API Key Anda
+    const API_KEY = 'API KEY'; 
 
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-    recognition.lang = 'id-ID'; // Atur bahasa sesuai kebutuhan
+    recognition.lang = 'id-ID'; // lang
     recognition.interimResults = false;
 
     useEffect(() => {
         recognition.onresult = async (event) => {
-            const transcript = event.results[0][0].transcript; // Ambil teks dari hasil
+            const transcript = event.results[0][0].transcript; 
             setInput(transcript); // Set input dengan hasil suara
 
             // Kirim pesan secara otomatis dan tunggu balasan dari AI
